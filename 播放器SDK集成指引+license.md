@@ -55,6 +55,15 @@ NSString *licenseKey = "填入您购买的 填入您的 License Key"
 [TXLiveBase setLicenceURL:licenceURL key:licenseKey];
 ```
 
+
+【Flutter端】
+
+申请到license后，通过下面的接口初始化license，建议在启动的时候进行:
+```dart
+String licenceUrl = "填入您购买的 license 的 url";
+String licenseKey = "填入您购买的 license 的 key";
+SuperPlayerPlugin.setGlobalLicense(licenceUrl, licenceKey);
+```
 ------新增内容------
 
 ### (原）步骤2：添加 View
