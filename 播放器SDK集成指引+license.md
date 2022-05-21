@@ -35,7 +35,7 @@
 
 【Android端】
 
-申请到license后，通过下面的接口初始化license，建议在Application启动的时候进行：
+获取到License信息后，通过下面的接口初始化License，建议在Application启动的时候进行：
 
 ```java
 String licenceUrl = "填入您的 License Key";
@@ -47,7 +47,7 @@ TXLiveBase.getInstance().setLicence(context, licenceUrl, licenseKey);
 
 【iOS端】
 
-申请到license后，通过下面的接口初始化license，建议在Application启动的时候进行：
+获取到License信息后，通过下面的接口初始化License，建议在Application启动的时候进行：
 
 ```objective-c
 NSString *licenceURL = "填入您购买的 填入您的 License Key";
