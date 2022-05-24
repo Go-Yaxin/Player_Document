@@ -27,11 +27,11 @@
 
 ### 步骤2：配置License授权
 
-若您已获得视频播放授权，需在[腾讯云视立方控制台](https://console.cloud.tencent.com/vcube) 获取License URL和License Key；
+若您已获得相关License授权，需在[腾讯云视立方控制台](https://console.cloud.tencent.com/vcube) 获取License URL和License Key；
 
 <img width="1317" alt="image" src="https://user-images.githubusercontent.com/88317062/169646279-929248e3-8ded-4b9e-8b04-2b6e462054a0.png">
 
-若您暂未获得License授权，需先参考[视频播放授权]()获取相关授权。
+若您暂未获得License授权，需先参考[视频播放License]()获取相关授权。
 
 【Android端】
 
