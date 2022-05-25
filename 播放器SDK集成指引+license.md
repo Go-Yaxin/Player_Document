@@ -35,34 +35,50 @@
 
 【Android端】
 
-获取到License信息后，通过下面的接口初始化License，建议在Application启动的时候进行：
+获取到License信息后，在调用 SDK 的相关接口前，通过下面的接口初始化License，建议在 Application类中进行如下设置：
 
 ```java
-String licenceUrl = "填入您的 License Key";
-String licenseKey = "填入您的 License Key"
-TXLiveBase.getInstance().setLicence(context, licenceUrl, licenseKey);
-```
+public class MApplication extends Application {
 
-### 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        String licenceURL = ""; // 获取到的 licence url
+        String licenceKey = ""; // 获取到的 licence key
+        TXLiveBase.getInstance().setLicence(this, licenceURL, licenceKey);
+        TXLiveBase.setListener(new TXLiveBaseListener() {
+            @Override
+            public void onLicenceLoaded(int result, String reason) {
+                Log.i(TAG, "onLicenceLoaded: result:" + result + ", reason:" + reason);
+            }
+        });
+    }
+}
+```
 
 【iOS端】
 
-获取到License信息后，通过下面的接口初始化License，建议在Application启动的时候进行：
+获取到License信息后，在调用 SDK 的相关接口前，通过下面的接口初始化License，建议在 `- [AppDelegate application:didFinishLaunchingWithOptions:]` 中进行如下设置：
 
 ```objective-c
-NSString *licenceURL = "填入您购买的 填入您的 License Key";
-NSString *licenseKey = "填入您购买的 填入您的 License Key"
-[TXLiveBase setLicenceURL:licenceURL key:licenseKey];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSString * const licenceURL = @"<获取到的licenseUrl>";
+    NSString * const licenceKey = @"<获取到的key>";
+        
+    //TXLiveBase 位于 "TXLiveBase.h" 头文件中
+    [TXLiveBase setLicenceURL:licenceURL key:licenceKey]; 
+    NSLog(@"SDK Version = %@", [TXLiveBase getSDKVersionStr]);
+}
 ```
 
 
 【Flutter端】
 
-申请到license后，通过下面的接口初始化license，建议在启动的时候进行:
+申请到license后，在调用 SDK 的相关接口前，通过下面的接口初始化license，建议在应用启动的时候进行:
 ```dart
-String licenceUrl = "填入您购买的 license 的 url";
-String licenseKey = "填入您购买的 license 的 key";
-SuperPlayerPlugin.setGlobalLicense(licenceUrl, licenceKey);
+String licenceURL = ""; // 获取到的 licence url
+String licenceKey = ""; // 获取到的 licence key
+SuperPlayerPlugin.setGlobalLicense(licenceURL, licenceKey);
 ```
 ------新增内容------
 
