@@ -37,9 +37,9 @@ License 通过与应用包名绑定实现对应应用的 SDK 使用授权，如�
 
 ## 正式版 License
 
-正式版 License 需购买后方可获得，计费详情可参见 [SDK 授权费用]() ，不同 SDK 所需的正式版 License 如下表，不同 SDK 详情可参见 [音视频终端 SDK 子产品介绍](https://cloud.tencent.com/document/product/1449/72295)
+正式版 License 需购买后方可获得，计费详情可参见 [SDK 授权费用]() ，不同 SDK 所需的正式版 License 如下表，不同 SDK 详情可参见 [音视频终端 SDK 子产品介绍](https://cloud.tencent.com/document/product/1449/72295)。
 
-<img width="875" alt="image" src="https://user-images.githubusercontent.com/88317062/191689598-855bbf40-1ca7-4de5-96b7-15f3262e00c6.png">
+<img width="709" alt="image" src="https://user-images.githubusercontent.com/88317062/201603934-d06e9283-7c35-4869-9bb0-51b0aed34d05.png">
 
 >?
 >
